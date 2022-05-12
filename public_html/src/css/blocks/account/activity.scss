@@ -1,0 +1,79 @@
+.activity-table {
+    margin-bottom: 2rem;
+    & .table-caption,
+    & .table-row {
+        $divider: 3px;
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            border-radius: $border-radius;
+            height: $divider;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -$divider / 2;
+        }
+    }
+    & .table-caption {
+        @extend h4;
+        padding-bottom: .85rem;
+        margin: 0;
+        &:before {
+            background-color: $primary;
+        }
+    }
+    & .table-row {
+        @extend .row;
+        @extend .g-2;
+        &:before {
+            background-color: rgba($primary, .1);
+        }
+    }
+    & .table-cell {
+        @extend .col;
+        &-date {
+            @extend .col-auto;
+        }
+        &-last {
+            @extend .col-12;
+            color: $primary;
+            font-weight: $font-weight-bolder;
+            white-space: nowrap;
+        }
+
+    }
+    @include media-breakpoint-up(md) {
+        display: table;
+        & .table-caption {
+            display: table-caption;
+        }
+        & .table-row-group {
+            display: table-row-group;
+        }
+        & .table-row {
+            display: table-row;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        & [class^="table-cell"] {
+            display: table-cell;
+            @include padding-y(.85rem);
+            @include padding-x(1rem);
+        }
+    }
+    @include media-breakpoint-down(md) {
+        & .table-row {
+            @include padding-y(1rem);
+            &:before {
+                left: .25rem;
+                right: .25rem;
+            }
+        }
+        & .table-cell {
+            &-last {
+                text-align: right;
+            }
+        }
+    }
+}

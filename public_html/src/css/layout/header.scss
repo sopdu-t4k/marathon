@@ -1,0 +1,183 @@
+header {
+    position: relative;
+    @include back-color(desaturate(darken($primary, 5%), 10%));
+    z-index: 10;
+    &.header-sticky {
+        position: sticky;
+        top: 0;
+        z-index: $zindex-fixed;
+    }
+    & .navbar {
+        @extend .container;
+        @extend .navbar-expand-xl;
+        @extend .navbar-dark;
+        font-size: .8rem;
+        &-collapse {
+            justify-content: center;
+        }
+        &-brand {
+            font-weight: $font-weight-light;
+            font-size: 1em;
+            &-text {
+                @extend .text-uppercase;
+                font-size: 1.25em;
+                font-weight: $font-weight-bolder;
+                line-height: 1.6;
+            }
+        }
+        &-account {
+            position: relative;
+            @extend .order-lg-1;
+            margin-left: $navbar-brand-margin-end;
+            & .btn {
+                color: $white !important;
+                font-size: 1em;
+                font-weight: $font-weight-bold;
+                background-color: rgba($white, .2);
+                @include padding-y(.45em);
+                &:hover {
+                    background-color: rgba($white, .25);
+                }
+            }
+            & .dropdown {
+                &-menu {
+                    @extend .dropdown-menu-end;
+                }
+                &-item {
+                    &:hover, &.active {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        &-feedback {
+            margin-left: auto;
+            & .btn {
+                background-image: url(../img/icons/feedback.svg);
+                @include back-image($size: 30px);
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                @extend .d-md-none;
+            }
+        }
+    }
+    & .navbar-nav {
+        & .nav-link {
+            text-decoration: underline;
+            border-radius: $border-radius;
+            white-space: nowrap;
+            &.active {
+                background-color: rgba($white, .15);
+                text-decoration: none;
+            }
+            &:hover {
+                background-color: rgba($white, .2);
+                text-decoration: none;
+            }
+        }
+    }
+    & .header {
+        @extend .container;
+        display: flex;
+        align-items: flex-end;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        &:before {
+            content: '';
+            display: block;
+            width: 30%;
+            height: 100%;
+            background-image: url(../img/heart.svg);
+            @include back-image($size: auto 175%, $position: center left);
+            opacity: .4;
+            position: absolute;
+            top: 0;
+            left: 70%;
+            z-index: -1;
+        }
+        &__title {
+            @extend h2;
+            flex: 1 0 0%;
+            margin-bottom: 0;
+        }
+        &__feedback {
+            flex: 0 0 0%;
+            margin-left: 1rem;
+            & .btn {
+                white-space: nowrap;
+                color: $white !important;
+                font-size: 1em;
+                @include padding-x(26px, 0);
+                background-image: url(../img/icons/feedback.svg);
+                @include back-image($size: 22px, $position: left center);
+                &:not(:hover) {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up(md) {
+        & .navbar {
+            &-account {
+                & .btn-user {
+                    @include circle(40px);
+                    background-image: url(../img/icons/user_white.svg);
+                    @include back-image($size: 42%);
+                    padding: 0;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        & .navbar {
+            font-size: .9rem;
+        }
+        & .navbar-nav {
+            width: 100%;
+            max-width: 840px;
+            justify-content: space-around;
+        }
+        & .header-title {
+            font-size: $h1-font-size;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+    @include media-breakpoint-up(xxl) {
+        & .navbar {
+            font-size: 1rem;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        & .navbar {
+            @include padding-y(.2em);
+            @include padding-x(1.2rem);
+            &-account {
+                margin-left: .8rem;
+                & .btn {
+                    background-color: transparent !important;
+                    background-image: url(../img/icons/user_white.svg);
+                    @include back-image($size: 20px);
+                    padding: 0;
+                    width: 30px;
+                    height: 30px;
+                    & span {
+                        display: none;
+                    }
+                }
+            }
+        }
+        & .header {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            &:before {
+                width: 36%;
+                left: 64%;
+            }
+            &__feedback {
+                display: none;
+            }
+        }
+    }
+}

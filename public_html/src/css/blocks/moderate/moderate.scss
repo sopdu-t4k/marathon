@@ -1,0 +1,124 @@
+.moderate {
+    $divider: 3px;
+    margin-bottom: 2rem;
+    &, &__item {
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            border-radius: $border-radius;
+            height: $divider;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+    }
+    &:before {
+        background-color: $primary;
+        top: 0;
+    }
+    &__item {
+        &:before {
+            background-color: rgba($primary, .1);
+            bottom: -$divider / 2;
+        }
+    }
+    &__header {
+        @extend .row;
+        @extend .gx-3;
+        @extend .gy-2;
+        @include padding-y(.5rem);
+        align-items: center;
+        cursor: pointer;
+        & .player-name {
+            @extend .col-12;
+            @extend .col-md-6;
+            @include padding-y(.35rem);
+            & .user {
+                position: relative;
+                padding-left: 44px;
+                &-name {
+                    display: inline-block;
+                    margin-right: 1rem;
+                }
+                &-image {
+                    @include avatar(34px);
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+                &-rating {
+                    display: inline-block;
+                    font-weight: $font-weight-bolder;
+                    font-size: $font-size-sm;
+                }
+            }
+        }
+        & .player-task {
+            @extend .col-auto;
+            @extend .col-md-4;
+            @include padding-y(.35rem);
+            font-size: $font-size-sm;
+        }
+        & .player-badge {
+            @extend .col-auto;
+            @extend .ms-md-auto;
+            line-height: 1;
+            @include padding-y(.35rem);
+            & .badge {
+                @extend .bg-secondary;
+                @extend .rounded-pill;
+            }
+        }
+    }
+    &__body {
+        padding-bottom: .25rem;
+        @include media-breakpoint-up(md) {
+            padding-left: 44px;
+        }
+        & .task-item {
+            @extend .border;
+            @extend .rounded;
+            font-size: $font-size-sm;
+            padding: .85rem;
+            margin-bottom: .85rem;
+            &-row {
+                @extend .row;
+                @extend .gx-3;
+                @extend .gy-2;
+            }
+            &-date {
+                @extend .col-auto;
+            }
+            &-name {
+                @extend .col;
+                & a {
+                    display: inline-block;
+                    padding-left: 24px;
+                    @extend .text-body;
+                    background-image: url(../img/icons/file-download.svg);
+                    @include back-image($size: 18px, $position: top left);
+                }
+            }
+            &-control {
+                @extend .col-12;
+                @extend .col-md-auto;
+                @extend .text-md-center;
+                min-width: 220px;
+                & .btn {
+                    @extend .btn-sm;
+                    &-red {
+                        margin-left: .5rem;
+                    }
+                }
+            }
+            &-status {
+                font-weight: $font-weight-bolder;
+            }
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        max-width: 830px;
+    }
+}

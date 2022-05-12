@@ -1,0 +1,98 @@
+<!-- Авторизация -->
+<div class="modal fade" id="authorization" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body login">
+
+                <!-- Войти -->
+                <div id="auth">
+                    <h3 class="modal-title"><b>Авторизация</b></h3>
+                    <form method="post">
+                        <div class="alert alert-danger">
+                            <b>Ошибка!</b> Не верный логин или пароль
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="E-mail">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Пароль">
+                        </div>
+                        <div class="auth-remember">
+                            <div class="login-checkbox">
+                                <input type="checkbox" class="form-check-input" id="remember">
+                                <label class="form-check-label" for="remember">Запомнить</label>
+                            </div>
+                            <a class="js-toggle link-small" href="#recover" data-hide="#auth">Забыли пароль?</a>
+                        </div>
+                        <div class="login-footer">
+                            <button type="submit" class="btn">Войти</button>
+                        </div>
+                    </form>
+                    <a href="#registration" data-bs-toggle="modal" data-bs-dismiss="modal" class="link-small">Регистрация</a>
+                </div>
+
+                <!-- Восстановить пароль -->
+                <div id="recover" class="collapse">
+                    <h3 class="modal-title"><b>Восстановить пароль</b></h3>
+                    <form method="post">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="E-mail" autocomplete="off">
+                        </div>
+                        <div class="login-footer">
+                            <button type="submit" class="btn">Отправить</button>
+                        </div>
+                    </form>
+                    <a class="js-toggle link-small" href="#auth" data-hide="#recover">Авторизация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Регистрация -->
+<div class="modal fade" id="registration" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body login">
+                <h3 class="modal-title">Регистрация</h3>
+                <form method="post">
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" class="form-control is-invalid">
+                    </div>
+                    <div class="form-group">
+                        <label>ФИО</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Пароль</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Повторите пароль</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <div class="form-group mt-4">
+                        <label>Введите код с картинки</label>
+                        <div class="captcha">
+                            <div>
+                                <img src="img/captcha.jpg" alt=""/>
+                            </div>
+                            <div>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-checkbox mb-4">
+                        <input type="checkbox" class="form-check-input" id="assent" checked>
+                        <label class="form-check-label" for="assent">Я согласен <a href="#">с условиями</a></label>
+                    </div>
+                    <div class="login-footer">
+                        <button type="submit" class="btn">Зарегистрироваться</button>
+                    </div>
+                </form>
+                <a href="#authorization" data-bs-toggle="modal" data-bs-dismiss="modal" class="link-small">Авторизация</a>
+            </div>
+        </div>
+    </div>
+</div>

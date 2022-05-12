@@ -1,0 +1,11 @@
+.dropdown {
+    &-menu {
+        box-shadow: $dropdown-box-shadow;
+        padding-bottom: 0;
+        & li {
+            & ~ li {
+                border-top: 1px solid $dropdown-divider-bg;
+            }
+        }
+    }
+}

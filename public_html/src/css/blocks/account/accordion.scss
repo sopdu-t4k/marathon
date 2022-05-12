@@ -1,0 +1,11 @@
+.accordion {
+    &__item {
+        @extend .border;
+        @extend .rounded;
+        @include padding-x($accordion-inner);
+        margin-bottom: 1rem;
+    }
+    &__body {
+        padding-bottom: $accordion-inner;
+    }
+}

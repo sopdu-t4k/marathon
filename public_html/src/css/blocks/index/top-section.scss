@@ -1,0 +1,118 @@
+.top-section {
+    &__body {
+        @include padding-y(30px);
+    }
+    &__text {
+        font-size: $font-size-sm;
+        margin-bottom: 1.5rem;
+    }
+    &__title {
+        @extend .display-2;
+        color: $primary;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    &__date {
+        @extend h4;
+        color: $primary;
+        margin-bottom: 2rem;
+    }
+    &__button {
+        margin-bottom: 1.5rem;
+        & .btn {
+            @extend .btn-secondary;
+            @include media-breakpoint-up(xl) {
+                font-size: $btn-font-size-lg;
+                padding: $btn-padding-y-lg $btn-padding-x-lg;
+            }
+        }
+    }
+    &__logos {
+        @extend .row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    &__logo {
+        @extend .col;
+        @extend %unstyled;
+        & img {
+            display: block;
+            max-width: 100%;
+            @extend .mx-auto;
+            &.niioz {
+                max-width: 90%;
+            }
+        }
+    }
+    @include media-breakpoint-up(sm) {
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            background-image: url(../img/hero-girl.jpg);
+            @include back-image($size: auto 100%, $position: left center);
+            position: absolute;
+            width: 35%;
+            height: 95%;
+            bottom: 0;
+            left: 65%;
+            z-index: -1;
+        }
+
+        &__body {
+            max-width: 420px;
+            @include padding-y(40px);
+        }
+    }
+    @include media-breakpoint-up(md) {
+        &:before {
+            width: 40%;
+            left: 60%;
+        }
+        &__body {
+            @include padding-y(60px);
+        }
+        &__text {
+            margin-bottom: 2rem;
+        }
+        &__title {
+            margin-bottom: 1.5rem;
+        }
+        &__date {
+            margin-bottom: 2.5rem;
+        }
+        &__button {
+            margin-bottom: 2.5rem;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        &:before {
+            width: 50%;
+            left: 50%;
+        }
+        &__body {
+            @include padding-y(80px);
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        &:before {
+            width: 55%;
+            left: 45%;
+        }
+        &__body {
+            @include padding-y(100px);
+        }
+        &__text {
+            margin-bottom: 2.5rem;
+        }
+        &__title {
+            margin-bottom: 2rem;
+        }
+        &__date {
+            margin-bottom: 3rem;
+        }
+        &__button {
+            margin-bottom: 3.5rem;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.form-control {
+    &::placeholder {
+        transition: all 0.3s ease;
+    }
+    &:hover {
+        &::placeholder {
+            color: $input-color;
+        }
+    }
+    &:focus {
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-check {
+    &-input {
+        margin-top: .15em;
+    }
+}
+.form {
+    &__submit {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        & .btn-reset {
+            @extend .btn-link;
+            @extend .text-body;
+            @extend .px-0;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+        & .btn-submit {
+            @extend .btn-primary;
+            margin-bottom: 1rem;
+        }
+    }
+}
+.input-file {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    & input[type="file"] {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+    }
+    & .btn {
+        @extend .btn-secondary;
+        @extend .btn-sm;
+    }
+    & .file-name {
+        margin-bottom: $form-label-margin-bottom;
+    }
+}

@@ -1,0 +1,83 @@
+.program {
+    @extend .container;
+    @extend %section-padding;
+    @extend %section-margin;
+    & .section-h2 {
+        text-align: center;
+    }
+    &__item {
+        @extend .col-12;
+        @extend .col-lg-4;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    &__head {
+        @include back-color();
+        padding: 1rem 1.5rem;
+        @extend h4;
+        margin: 0;
+    }
+    &__body {
+        flex: 1 0 0%;
+        background-color: $white;
+        padding: 1rem 1.5rem;
+        box-shadow: $box-shadow;
+        margin-bottom: 1rem;
+    }
+    &-list {
+        @extend .list-unstyled;
+        & li {
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            & b {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+    &__footer {
+        position: relative;
+        padding-top: 1rem;
+        font-size: $small-font-size;
+        margin-bottom: .5rem;
+        &:before {
+            content: '';
+            display: block;
+            background-color: $gray-500;
+            height: 1px;
+            width: 35%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        &__head {
+            @include flex();
+            min-height: 5em;
+        }
+        &-list {
+            &.list-arrow {
+                & li {
+                    padding-left: 0;
+                    &:before {
+                        position: static;
+                        margin-bottom: .8rem;
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up(xxl) {
+        &__head {
+            font-size: $h3-font-size;
+            padding: 1.5rem 2rem;
+        }
+        &__body {
+            padding: 1.5rem 2rem;
+            font-size: 1.1rem;
+        }
+    }
+}

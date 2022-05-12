@@ -1,0 +1,55 @@
+.contacts {
+    @include back-color();
+    text-align: center;
+    padding-top: 3rem;
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        background-image: url(../img/heart.svg);
+        @include back-image($size: auto 115%, $position: top left);
+        opacity: .4;
+        position: absolute;
+        width: 65%;
+        height: 85%;
+        top: 15%;
+        left: 35%;
+    }
+    & .section-h2 {
+        color: inherit;
+    }
+    & a {
+        color: inherit !important;
+    }
+    &__body {
+        position: relative;
+        @include padding-y(1rem);
+        z-index: 1;
+        & p {
+            margin-bottom: .3rem;
+        }
+        & .h5 {
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__item {
+        margin-bottom: 2rem;
+    }
+    &__footer {
+        position: relative;
+        @include padding-y(.5rem);
+        font-size: $small-font-size;
+        z-index: 1;
+    }
+    @include media-breakpoint-up(sm) {
+        padding-top: 4rem;
+        &:before {
+            width: 50%;
+            left: 50%;
+            background-size: auto 130%;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        padding-top: 5rem;
+    }
+}

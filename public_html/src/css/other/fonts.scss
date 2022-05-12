@@ -1,0 +1,18 @@
+$font-base-300: 'overpass-v10-latin_cyrillic-300';
+$font-base-400: 'overpass-v10-latin_cyrillic-regular';
+$font-base-700: 'overpass-v10-latin_cyrillic-700';
+$font-base-900: 'overpass-v10-latin_cyrillic-900';
+$fonts: (300, $font-base-300),
+        (400, $font-base-400),
+        (700, $font-base-700),
+        (900, $font-base-900);
+@each $weight, $file in $fonts {
+    @font-face {
+        font-family: $base-font-name;
+        src: local(''),
+             url('#{$base-font-path}/#{$file}.woff2') format('woff2'),
+             url('#{$base-font-path}/#{$file}.woff') format('woff');
+        font-weight: $weight;
+        font-style: normal;
+    }
+}

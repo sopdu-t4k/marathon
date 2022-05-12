@@ -1,0 +1,59 @@
+.profile {
+    &__fieldset {
+        margin-bottom: 3rem;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 2rem;
+            & h4 {
+                margin-bottom: 1rem;
+            }
+        }
+        & .form-group {
+            @extend .row;
+            & .col-form-label {
+                max-width: 160px;
+            }
+            & .col-form-input {
+                @extend .col-sm;
+            }
+        }
+    }
+    &__photo {
+        display: flex;
+        align-items: center;
+        & .user-image {
+            @include avatar(100px);
+            margin-right: 1.5rem;
+            margin-bottom: 1rem;
+            @include media-breakpoint-down(lg) {
+                width: 80px;
+                height: 80px;
+                margin-right: 1rem;
+            }
+        }
+    }
+    &__progress {
+        @extend .row;
+        margin-top: 1.5rem;
+        & .progress-photo {
+            @extend .col-12;
+            @extend .col-sm;
+            margin-bottom: 2rem;
+            & .form-label {
+                font-weight: $font-weight-bolder;
+                margin-bottom: .5rem;
+            }
+            & .progress-image {
+                margin-top: 1.5rem;
+                & img {
+                    @extend .border;
+                    @extend .rounded;
+                    display: block;
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
+                    max-height: 500px;
+                }
+            }
+        }
+    }
+}

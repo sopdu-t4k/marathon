@@ -1,0 +1,41 @@
+.team {
+    @extend .bg-light;
+    text-align: center;
+    @include padding-y(3.5rem, 2.5rem);
+    & .section-h2 {
+        color: $secondary;
+    }
+    &__body {
+        @extend .row;
+    }
+    &__item {
+        @extend .col-12;
+        @extend .col-md-4;
+        display: flex;
+        @include padding-y(1.5rem);
+    }
+    &-logo {
+        @extend %unstyled;
+        display: flex;
+        flex-direction: column;
+        @extend .mx-auto;
+        & img {
+            display: block;
+            max-width: 80%;
+            margin: auto;
+        }
+    }
+    &-name {
+        padding-top: 1.5rem;
+        margin-top: auto;
+    }
+    @include media-breakpoint-up(lg) {
+        @include padding-y(5rem, 4rem);
+        &-logo {
+            max-width: 265px;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        @include padding-y(6rem, 5rem);
+    }
+}

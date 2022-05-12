@@ -1,0 +1,193 @@
+// Options
+
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-responsive-font-sizes: true;
+$enable-validation-icons: false;
+
+// Grid containers
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1220px
+);
+
+// Spacing
+
+$grid-gutter-width: 2rem;
+
+// Color system
+
+$white:    #fff;
+$gray-100: #FAFAFA;
+$gray-200: #ECECEC;
+$gray-300: #E0E0E0;
+$gray-400: #ced4da;
+$gray-500: #BDBDBD;
+$gray-600: #817a7a;
+$gray-700: #4F4F4F;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #EB5757;
+$orange:  #EC5238;
+$yellow:  #ffc107;
+$green:   #219653;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+
+$primary:       $orange;
+$secondary:     #C49468;
+$success:       #39B51A;
+$danger:        #E81313;
+$info:          $cyan;
+$warning:       $yellow;
+$light:         $gray-100;
+$dark:          $gray-900;
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "red":        $red,
+    "green":      $green
+);
+
+$body-color: $gray-700;
+$link-color: $secondary;
+$link-hover-decoration: none;
+
+// Typography
+
+$base-font-path:              '../fonts';
+$base-font-name:              'Overpass';
+$font-family-base:            $base-font-name, sans-serif;
+
+$font-weight-lighter:         300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-bolder:          900;
+
+$font-size-base:              1rem;
+$font-size-sm:                $font-size-base * .875;
+$lead-font-size:              $font-size-base * 1.5;
+$font-size-lg:                $font-size-base * 1.125;
+$h1-font-size:                $font-size-base * 3;
+$h2-font-size:                $font-size-base * 2.3;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.2;
+$h6-font-size:                $font-size-base;
+
+$small-font-size:             .75em;
+$headings-font-weight:        $font-weight-bolder;
+$headings-line-height:        1.2;
+$headings-margin-bottom:      1.8rem;
+$display-font-weight:         $font-weight-bolder;
+$display-line-height:         1.1;
+
+// Components
+
+$border-radius:               .2rem;
+$border-radius-sm:            .15rem;
+$border-radius-lg:            .25rem;
+
+// Buttons + Forms
+
+$input-btn-padding-y-sm: .24rem;
+$input-btn-focus-width: .15rem;
+$input-btn-focus-color: rgba($secondary, .25);
+
+$btn-padding-y: .34rem;
+$btn-focus-width: 0;
+$btn-font-size: $font-size-lg;
+$btn-font-size-lg: 1.25rem;
+$btn-font-weight: $font-weight-normal;
+$btn-padding-x: 1.3rem;
+$btn-padding-x-sm: 1rem;
+$btn-padding-x-lg: 1.5rem;
+$btn-padding-y-lg: .45rem;
+$btn-focus-box-shadow: none;
+
+$btn-close-focus-shadow: none;
+
+$input-padding-y: .43rem;
+$input-border-color: $gray-300;
+$input-focus-border-color: lighten($secondary, 20%);
+$input-placeholder-color: $gray-500;
+
+$form-check-input-focus-box-shadow: none;
+$form-check-input-border-radius: .2em;
+$form-check-input-checked-color: $primary;
+$form-check-input-checked-bg-color: $white;
+$form-check-input-focus-border: rgba($black, .2);
+$form-check-input-border: 1px solid $form-check-input-focus-border;
+$form-check-input-checked-border-color: $form-check-input-focus-border;
+$form-check-input-checked-bg-image: url(../img/icons/check.svg);
+$form-check-label-cursor: pointer;
+
+$form-label-margin-bottom: .3em;
+$form-text-margin-top: .5em;
+$form-file-button-color: $white;
+$form-file-button-bg: $secondary;
+$form-file-button-hover-bg: desaturate(darken($form-file-button-bg, 5%), 10%);
+
+// Navbar
+
+$navbar-padding-y: .45em;
+$navbar-nav-link-padding-x: 1.2rem;
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: $white;
+$navbar-brand-font-size: $font-size-base;
+$navbar-brand-margin-end: 2rem;
+$nav-link-padding-x: 1.2rem;
+
+// Modals
+
+$modal-inner-padding: 1.5rem;
+$modal-sm: 380px;
+$modal-content-border-color: $primary;
+
+// Alerts
+
+$alert-margin-bottom: 1.5rem;
+$alert-padding-y: .55rem;
+$alert-bg-scale: -85%;
+$alert-border-scale: -50%;
+$alert-color-scale: 15%;
+
+// Dropdowns
+
+$dropdown-min-width: 12rem;
+$dropdown-padding-x: .8rem;
+$dropdown-padding-y: .2rem;
+$dropdown-spacer: .5rem;
+$dropdown-border-color: $white;
+$dropdown-divider-bg: $gray-200;
+$dropdown-box-shadow: 0px 10px 20px rgba($black, .1);
+$dropdown-link-color: $body-color;
+$dropdown-link-hover-color: $secondary;
+$dropdown-link-hover-bg: transparent;
+$dropdown-link-active-color: $secondary;
+$dropdown-link-active-bg: transparent;
+$dropdown-item-padding-y: .5em;
+$dropdown-item-padding-x: 0;
+
+// Toasts
+
+$toast-font-size: 1rem;
+
+$accordion-inner: 1.1rem;

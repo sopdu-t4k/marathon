@@ -1,0 +1,45 @@
+.diary {
+    @extend .table-responsive;
+    @extend .col-12;
+    &__table {
+        min-width: 590px;
+    }
+    &__head {
+        @extend .row;
+        @extend .gx-3;
+        @extend .my-2;
+        align-items: center;
+        text-align: center;
+        font-weight: $font-weight-bolder;
+    }
+    &__row {
+        @extend .row;
+        @extend .gx-3;
+        align-items: center;
+    }
+    &__footer {
+        @extend .row;
+        @extend .gx-3;
+        align-items: center;
+        font-weight: $font-weight-bolder;
+    }
+    &__col {
+        @extend .col;
+        @extend .mb-3;
+        &:first-of-type {
+            min-width: 170px;
+            text-align: left;
+        }
+        & .form-check-input {
+            font-size: 1.2rem;
+            display: block;
+            @extend .mx-auto;
+        }
+    }
+    &-progress {
+        color: $primary;
+        font-size: $h4-font-size;
+        display: block;
+        text-align: center;
+    }
+}

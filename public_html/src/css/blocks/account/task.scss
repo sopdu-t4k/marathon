@@ -1,0 +1,88 @@
+.task {
+    @extend .row;
+    @extend .gx-4;
+    @extend .gy-2;
+    align-items: center;
+    @include padding-y($accordion-inner);
+    &-title {
+        @extend .col-12;
+        @extend .col-md;
+    }
+    &-control {
+        @extend .col-auto;
+        @extend .col-sm;
+        @extend .col-md-auto;
+        & .btn {
+            @extend .btn-secondary;
+            @extend .btn-sm;
+        }
+    }
+    &-condition {
+        @extend .col;
+        @extend .col-sm-auto;
+        text-align: center;
+        font-size: $font-size-sm;
+        @include media-breakpoint-up(md) {
+            width: 200px;
+        }
+        & .input-file {
+            & .file-name {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            & .btn {
+                @extend .btn-primary;
+                @extend .btn-sm;
+                @extend .btn-block;
+                white-space: nowrap;
+            }
+        }
+        & .status {
+            font-weight: $font-weight-bolder;
+        }
+        &.done {
+            & .status {
+                @extend .status-success;
+                &-tooltip {
+                    @extend .tooltip-success;
+                }
+            }
+        }
+        &.fail {
+            & .status {
+                @extend .status-danger;
+                &-tooltip {
+                    @extend .tooltip-danger;
+                }
+            }
+            & .input-file {
+                @extend .mt-1;
+            }
+        }
+        &.send {
+            & .status {
+                @extend .status-warning;
+            }
+        }
+    }
+    &-head {
+        @extend .lesson-head;
+    }
+    &-date {
+        @extend .lesson-date;
+    }
+    &-name {
+        @extend .lesson-name;
+    }
+    &-text {
+        @extend .border-top;
+        padding-top: $accordion-inner;
+    }
+    &.disabled {
+        & .btn {
+            pointer-events: none;
+            opacity: .3;
+        }
+    }
+}

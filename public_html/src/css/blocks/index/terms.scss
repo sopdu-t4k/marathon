@@ -1,0 +1,26 @@
+.terms {
+    @extend .bg-light;
+    @include padding-y(1.5rem);
+    &__body {
+        @extend .row;
+        justify-content: center;
+    }
+    &__title {
+        @extend .col-12;
+        @extend .col-lg-auto;
+        @extend .my-2;
+        @extend h4;
+        color: $secondary;
+    }
+    &__text {
+        @extend .col-12;
+        @extend .col-lg-auto;
+        @extend .my-2;
+        & ol {
+            margin: 0;
+            & li {
+                @include padding-y(.2rem);
+            }
+        }
+    }
+}

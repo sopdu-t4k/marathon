@@ -1,0 +1,146 @@
+html {
+    font-size: 16px;
+}
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+}
+img {
+    max-width: 100%;
+}
+.section-h2 {
+    color: $primary;
+    @extend h2;
+    margin-bottom: 1.5rem;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 2rem;
+    }
+}
+%section-padding {
+    padding-top: 3rem;
+    @include media-breakpoint-up(md) {
+        padding-top: 5rem;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-top: 6.5rem;
+    }
+}
+%section-margin {
+    margin-bottom: 3rem;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 5rem;
+    }
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 6.5rem;
+    }
+}
+%section-text {
+    @include media-breakpoint-up(lg) {
+        font-size: 1.1rem;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 1.25rem;
+    }
+}
+.text-bold {
+    font-weight: $font-weight-bold;
+}
+.page {
+    &__content {
+        @extend .col-12;
+        @extend .col-lg;
+        margin-bottom: 2rem;
+    }
+    &__aside {
+        @extend .col-12;
+        @extend .col-lg-auto;
+        margin-bottom: 2rem;
+        & .aside-col {
+            @extend .col-12;
+            @extend .col-md-6;
+            @extend .col-lg-12;
+            display: flex;
+        }
+        @include media-breakpoint-up(lg) {
+            width: 330px;
+        }
+        @include media-breakpoint-up(xxl) {
+            margin-left: 2rem;
+        }
+    }
+    &-title {
+        @extend h2;
+        margin-top: 3rem;
+        margin-bottom: 2.5rem;
+        @include media-breakpoint-down(md) {
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    &-nav {
+        background-color: rgba($primary, .1);
+        & .nav {
+            @extend .container;
+            flex-wrap: nowrap;
+            & .nav-link {
+                position: relative;
+                color: $body-color;
+                font-weight: $font-weight-bold;
+                line-height: 1.3;
+                @include padding-y(1rem);
+                &:hover {
+                    background-color: rgba($primary, .05);
+                }
+                &.active {
+                    color: $primary;
+                    text-decoration: none;
+                    &:before {
+                        content: '';
+                        display: block;
+                        background-color: $primary;
+                        border-radius: $border-radius;
+                        width: 100%;
+                        height: .25rem;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(md) {
+            overflow: auto;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                height: 0;
+            }
+            & .nav {
+                & .nav-link {
+                    padding: .75rem 1rem;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+.status {
+    &-success {
+        color: $green;
+    }
+    &-danger {
+        color: $red;
+    }
+    &-warning {
+        color: $secondary;
+    }
+}
+.alert-success {
+    color: darken($success, 10%);
+}

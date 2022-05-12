@@ -1,0 +1,95 @@
+.modal-body {
+    @include padding-y(2rem);
+    & .modal-title {
+        color: $primary;
+        margin-bottom: 1.5rem;
+    }
+    & label {
+        @extend .form-label;
+        font-size: $font-size-sm;
+    }
+    & textarea {
+        min-height: 120px;
+    }
+    & .form-footer {
+        @include padding-y(1rem);
+    }
+    @include media-breakpoint-up(sm) {
+        padding: 2rem;
+    }
+    &.feedback {
+        & .modal-title {
+            text-align: center;
+        }
+        & .form-footer {
+            & .btn {
+                @extend .btn-primary;
+                @extend .btn-block;
+            }
+        }
+    }
+    &.dismiss-task {
+        & .modal-title {
+            margin-bottom: 1rem;
+        }
+        & .dismiss-task-name {
+            font-size: $h5-font-size;
+            margin-bottom: 1rem;
+        }
+        & .dismiss-task-player {
+            margin-bottom: 1.5rem;
+        }
+        & .form-footer {
+            & .btn {
+                @extend .btn-primary;
+                @extend .btn-block;
+            }
+        }
+    }
+}
+.login {
+    text-align: center;
+    & .auth-remember {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        & .login-checkbox {
+            margin-right: 1rem;
+            flex-grow: 1;
+        }
+    }
+    & .link-small {
+        font-size: $font-size-sm;
+        @extend .text-body;
+    }
+    &-checkbox {
+        @extend .form-check;
+        text-align: left;
+        font-size: $font-size-sm;
+    }
+    &-footer {
+        @include padding-y(1rem, 1.5rem);
+        & .btn {
+            @extend .btn-primary;
+            @extend .btn-block;
+        }
+    }
+    & label {
+        display: block;
+        text-align: left;
+    }
+    & .alert {
+        text-align: left;
+        font-size: $font-size-sm;
+    }
+    & .captcha {
+        display: flex;
+        align-items: center;
+        margin: 0 -.5rem;
+        &>div {
+            padding: 0 .5rem;
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+    }
+}

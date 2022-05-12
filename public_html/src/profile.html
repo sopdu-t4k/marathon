@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        //= template/head.html
+    </head>
+    <body>
+        //= template/header2.html
+        <main>
+            <!-- Start content page -->
+            <div class="container">
+                <h1 class="page-title">Профиль</h1>
+
+                <div class="row">
+                    <div class="page__content">
+                        <form method="post">
+                            <div class="profile__fieldset">
+                                <h4>Фото профиля</h4>
+                                <div class="profile__photo">
+                                    <div class="user-image"></div>
+                                    <div>
+                                        <label class="input-file">
+                                            <input type="file">
+                                            <span class="btn">Загрузить фотографию</span>
+                                        </label>
+                                        <div class="form-text">
+                                            Поддерживаются файлы png и jpg, размером до 1Mb
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile__fieldset">
+                                <h4>Личные данные</h4>
+                                <div class="form-group">
+                                    <label class="col-form-label">Ваше имя</label>
+                                    <div class="col-form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Ваше отчетство</label>
+                                    <div class="col-form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Ваша фамилия</label>
+                                    <div class="col-form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Должность</label>
+                                    <div class="col-form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Место работы</label>
+                                    <div class="col-form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile__fieldset">
+                                <h4>Контакты</h4>
+                                <div class="form-group">
+                                    <label class="col-form-label">Ваш e-mail</label>
+                                    <div class="col-form-input">
+                                        <input type="email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Ваш телефон</label>
+                                    <div class="col-form-input">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile__fieldset">
+                                <h4>Ваш прогресс</h4>
+                                <p>
+                                    Для отслеживания ваших успехов мы рекомендуем загрузить свое фото в полный рост до и после окончания марафона. Мало что так мотивирует, как реальные визуальные изменения.
+                                </p>
+                                <p>
+                                    <b class="text-primary">Совет:</b> фотография должна быть сделана в полный рост и с хорошим светом.
+                                </p>
+                                <div class="profile__progress">
+                                    <div class="progress-photo">
+                                        <div class="form-label">Фото до начала марафона</div>
+                                        <div class="small">Загружено 21.03.2022</div>
+                                        <div class="small">
+                                            <a href="#" class="text-body">Удалить фото</a>
+                                        </div>
+                                        <div class="progress-image">
+                                            <img src="img/temp/progress.png" alt=""/>
+                                        </div>
+                                    </div>
+                                    <div class="progress-photo">
+                                        <div class="form-label">Фото в конце марафона</div>
+                                        <label class="input-file">
+                                            <input type="file">
+                                            <span class="btn">Загрузить</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__submit">
+                                <a href="#" class="btn btn-reset">Отменить изменения</a>
+                                <button type="reset" class="btn btn-submit">Сохранить изменения</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="page__aside">
+                        //= template/sidebar.html
+                    </div>
+                </div>
+            </div>
+            <!-- End content page -->
+        </main>
+        //= template/footer.html
+        //= template/feedback.html
+    </body>
+</html>

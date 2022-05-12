@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        //= template/head.html
+    </head>
+    <body>
+        //= template/header2.html
+        <main>
+            <!-- Start content page -->
+            <div class="page-nav">
+                <nav class="nav">
+                    <a class="nav-link active" href="education.html">Образовательная программа</a>
+                    <a class="nav-link" href="medicine.html">Медицинская программа</a>
+                    <a class="nav-link" href="tasks.html">Мои задания</a>
+                    <a class="nav-link" href="#">Физическая активность</a>
+                </nav>
+            </div>
+            <div class="container">
+                <h1 class="page-title">Образовательная программа</h1>
+                <div class="row">
+                    <div class="page__content">
+                        <div class="accordion">
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="lesson passed" data-bs-toggle="collapse" data-bs-target="#education1">
+                                        <div class="lesson-head">
+                                            <span class="lesson-date">11.04.2022</span>
+                                            <span class="lesson-status status-success">Просмотрен</span>
+                                        </div>
+                                        <div class="lesson-name">
+                                            Здоровое питание и с чем его едят: советы диетолога в формате TED talks
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="education1">
+                                    <div class="accordion__body">
+                                        <div class="lesson-video">
+                                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/DFHXK2ay2QU?list=PLzcDTXzMD6Ht24MnrRk1lhkNUDIFt8a76" frameborder="0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="lesson" data-bs-toggle="collapse" data-bs-target="#education2">
+                                        <div class="lesson-head">
+                                            <span class="lesson-date">12.04.2022</span>
+                                            <span class="lesson-status status-warning">Новый</span>
+                                        </div>
+                                        <div class="lesson-name">
+                                            Здоровое питание и с чем его едят: советы диетолога в формате TED talks
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="education2">
+                                    <div class="accordion__body">
+                                        <div class="lesson-video">
+                                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/DFHXK2ay2QU?list=PLzcDTXzMD6Ht24MnrRk1lhkNUDIFt8a76" frameborder="0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="lesson disabled" data-bs-toggle="collapse" data-bs-target="#education3">
+                                        <div class="lesson-head">
+                                            <span class="lesson-date">15.04.2022</span>
+                                            <span class="lesson-status status-danger">Просмотрите предыдущий ролик для доступа к этому</span>
+                                        </div>
+                                        <div class="lesson-name">
+                                            Вебинар "Здоровое питание как основа ЗОЖ. Часть 1"
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="education3">
+                                    <div class="accordion__body">
+                                        <div class="lesson-video">
+                                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/DFHXK2ay2QU?list=PLzcDTXzMD6Ht24MnrRk1lhkNUDIFt8a76" frameborder="0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page__aside">
+                        //= template/sidebar.html
+                    </div>
+                </div>
+            </div>
+            <!-- End content page -->
+        </main>
+        //= template/footer.html
+        //= template/feedback.html
+    </body>
+</html>

@@ -1,0 +1,19 @@
+.benefits {
+    @extend .container;
+    @extend %section-margin;
+    &__body {
+        @extend .row;
+        justify-content: space-between;
+    }
+    &__image {
+        @extend .col-12;
+        @extend .col-md-4;
+    }
+    &__text {
+        @extend .col-12;
+        @extend .col-md-8;
+        @extend .col-lg-7;
+        @extend .col-xl-6;
+        @extend %section-text;
+    }
+}

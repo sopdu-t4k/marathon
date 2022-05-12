@@ -1,0 +1,72 @@
+.status-tooltip {
+    $gap: 10px;
+    position: relative;
+    display: inline-block;
+    font-weight: $font-weight-normal;
+    &:hover {
+        & .status-tooltip-title {
+            display: block;
+        }
+    }
+    &-icon {
+        $size: 13px;
+        display: inline-flex;
+        justify-content: center;
+        font-size: $small-font-size;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        position: relative;
+        top: -5px;
+        margin-left: 3px;
+        cursor: pointer;
+    }
+    &-title {
+        display: none;
+        position: absolute;
+        right: -$gap;
+        bottom: 100%;
+        width: 240px;
+        padding-bottom: 10px;
+        z-index: $zindex-tooltip;
+    }
+    &-body {
+        position: relative;
+        font-size: $tooltip-font-size;
+        padding: $tooltip-padding-y $tooltip-padding-x;
+        border-radius: $tooltip-border-radius;
+        box-shadow: $box-shadow;
+        text-align: center;
+        &:before {
+            content: '';
+            border-color: transparent;
+            border-style: solid;
+            border-width: $tooltip-arrow-height ($tooltip-arrow-width * .5) 0;
+            position: absolute;
+            top: 100%;
+            right: $gap;
+        }
+    }
+    &.tooltip-danger {
+        & .status-tooltip-icon {
+            @include back-color($red);
+        }
+        & .status-tooltip-body {
+            @include back-color(darken($red, 7%));
+            &:before {
+                border-top-color: darken($red, 7%);
+            }
+        }
+    }
+    &.tooltip-success {
+        & .status-tooltip-icon {
+            @include back-color($green);
+        }
+        & .status-tooltip-body {
+            @include back-color(darken($green, 2%));
+            &:before {
+                border-top-color: darken($green, 2%);
+            }
+        }
+    }
+}

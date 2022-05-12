@@ -1,0 +1,44 @@
+.marathon-city {
+    @extend .bg-light;
+    &__body {
+        @extend .row;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    &__image {
+        @extend .col-12;
+        @extend .col-sm-4;
+        @extend .col-xl-3;
+        & img {
+            display: block;
+            @extend .img-fluid;
+            @include media-breakpoint-down(sm) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    &__text {
+        @extend .col-12;
+        @extend .col-sm-8;
+        @extend .col-xl-7;
+        @extend .order-sm-1;
+        font-size: 1.1rem;
+        @include padding-y(1.5rem);
+    }
+    @include media-breakpoint-up(md) {
+        &__text {
+            font-size: 1.3rem;
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        &__text {
+            font-size: 1.5rem;
+        }
+    }
+    @include media-breakpoint-up(xxl) {
+        &__text {
+            font-size: 1.7rem;
+        }
+    }
+}

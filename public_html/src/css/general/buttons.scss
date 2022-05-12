@@ -1,0 +1,23 @@
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+        color: $white !important;
+        &:hover, &:focus {
+            background-color: desaturate(darken($value, 5%), 10%);
+            border-color: desaturate(darken($value, 5%), 10%);
+        }
+    }
+}
+a, button {
+    outline: none !important;
+}
+.btn {
+    &-block {
+        width: 100%;
+    }
+    &-outline-light {
+        &:hover, &:focus {
+            background-color: rgba($white, .15);
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.toast {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    display: flex;
+    &-body {
+        flex-grow: 1;
+    }
+    & .btn-close {
+        margin: $toast-padding-x * .75;
+    }
+    &-secondary {
+        @include back-color($secondary);
+        border: 0;
+        & .btn-close {
+            @extend .btn-close-white;
+        }
+    }
+}

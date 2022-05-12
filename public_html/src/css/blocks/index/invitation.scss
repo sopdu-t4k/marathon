@@ -1,0 +1,30 @@
+.invitation {
+    @include flex();
+    flex-wrap: wrap;
+    background-color: rgba($primary, .1);
+    @include padding-y(1rem);
+    &__button {
+        @extend .col-12;
+        @extend .col-sm-5;
+        @extend .col-md-auto;
+        @extend .px-3;
+        @extend .my-2;
+        text-align: right;
+        & .btn {
+            @extend .btn-primary;
+        }
+    }
+    &__text {
+        @extend .col-12;
+        @extend .col-sm-7;
+        @extend .col-md-auto;
+        @extend .px-3;
+        @extend .my-2;
+        font-size: $font-size-lg;
+    }
+    @include media-breakpoint-down(sm) {
+        &, &__button {
+            text-align: center;
+        }
+    }
+}

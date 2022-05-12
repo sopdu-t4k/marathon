@@ -1,0 +1,9 @@
+footer {
+    @include back-color();
+}
+.footer {
+    @extend .container;
+    text-align: center;
+    @include padding-y(.5rem);
+    font-size: $small-font-size;
+}

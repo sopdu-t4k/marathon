@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        //= template/head.html
+    </head>
+    <body>
+        //= template/header2.html
+        <main>
+            <!-- Start content page -->
+            <div class="page-nav">
+                <nav class="nav">
+                    <a class="nav-link" href="education.html">Образовательная программа</a>
+                    <a class="nav-link" href="medicine.html">Медицинская программа</a>
+                    <a class="nav-link active" href="tasks.html">Мои задания</a>
+                    <a class="nav-link" href="#">Физическая активность</a>
+                </nav>
+            </div>
+            <div class="container">
+                <h1 class="page-title">Мои задания</h1>
+                <div class="row">
+                    <div class="page__content">
+                        <div class="accordion">
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="task">
+                                        <div class="task-title">
+                                            <div class="task-head">
+                                                <span class="task-date">10.04.2022</span>
+                                                <span class="task-status status-success">Выполнено</span>
+                                            </div>
+                                            <div class="task-name">
+                                                Задание 1
+                                            </div>
+                                        </div>
+                                        <div class="task-control">
+                                            <a href="#" target="_blank" class="btn">Подробнее</a>
+                                        </div>
+                                        <div class="task-condition done">
+                                            <div class="status">
+                                                Задание выполнено
+                                                <div class="status-tooltip">
+                                                    <span class="status-tooltip-icon">?</span>
+                                                    <div class="status-tooltip-title">
+                                                        <div class="status-tooltip-body">
+                                                            За выполненное задание вам начислен 1 балл
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="task">
+                                        <div class="task-title">
+                                            <div class="task-head">
+                                                <span class="task-date">11.04.2022</span>
+                                                <span class="task-status status-danger">Не принято</span>
+                                            </div>
+                                            <div class="task-name">
+                                                Задание 2
+                                            </div>
+                                        </div>
+                                        <div class="task-control">
+                                            <a href="#task2" data-bs-toggle="collapse" class="btn">Подробнее</a>
+                                        </div>
+                                        <div class="task-condition fail">
+                                            <div class="status">
+                                                Задание не принято
+                                                <div class="status-tooltip">
+                                                    <span class="status-tooltip-icon">?</span>
+                                                    <div class="status-tooltip-title">
+                                                        <div class="status-tooltip-body">
+                                                            Здесь будет написан текст, почему задание не принято
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <label class="input-file">
+                                                <input type="file">
+                                                <span class="btn">Пересдать задание</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="task2">
+                                    <div class="accordion__body">
+                                        <div class="task-text">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                aliqua. Sit amet venenatis urna cursus eget nunc scelerisque viverra. Aenean euismod elementum nisi quis eleifend quam
+                                                adipiscing. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Etiam dignissim diam quis enim lobortis scelerisque.
+                                            </p>
+                                            <p>
+                                                Eu feugiat pretium nibh ipsum consequat nisl. In nisl nisi scelerisque eu ultrices vitae. Lacus sed turpis tincidunt id aliquet
+                                                risus feugiat. Magna eget est lorem ipsum dolor sit amet consectetur adipiscing.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="task">
+                                        <div class="task-title">
+                                            <div class="task-head">
+                                                <span class="task-date">16.04.2022</span>
+                                                <span class="task-status status-warning">На проверке</span>
+                                            </div>
+                                            <div class="task-name">
+                                                Задание 3
+                                            </div>
+                                        </div>
+                                        <div class="task-control">
+                                            <a href="#" target="_blank" class="btn">Подробнее</a>
+                                        </div>
+                                        <div class="task-condition send">
+                                            <div class="status">Файл загружен</div>
+                                            Идет проверка...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="task">
+                                        <div class="task-title">
+                                            <div class="task-head">
+                                                <span class="task-date">16.04.2022</span>
+                                            </div>
+                                            <div class="task-name">
+                                                Задание 4
+                                            </div>
+                                        </div>
+                                        <div class="task-control">
+                                            <a href="#" target="_blank" class="btn">Подробнее</a>
+                                        </div>
+                                        <div class="task-condition">
+                                            <label class="input-file">
+                                                <input type="file">
+                                                <span class="btn">Загрузить результат</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <div class="task disabled">
+                                        <div class="task-title">
+                                            <div class="task-head">
+                                                <span class="task-date">10.04.2022</span>
+                                                <span class="task-status status-danger">Недоступно, пока не выполнено предыдущее</span>
+                                            </div>
+                                            <div class="task-name">
+                                                Задание 5
+                                            </div>
+                                        </div>
+                                        <div class="task-control">
+                                            <a href="#" target="_blank" class="btn">Подробнее</a>
+                                        </div>
+                                        <div class="task-condition">
+                                            <label class="input-file">
+                                                <input type="file">
+                                                <span class="btn">Загрузить результат</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page__aside">
+                        //= template/sidebar.html
+                    </div>
+                </div>
+            </div>
+            <!-- End content page -->
+        </main>
+        //= template/footer.html
+        //= template/feedback.html
+    </body>
+</html>

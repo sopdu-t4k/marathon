@@ -1,0 +1,33 @@
+.mission {
+    @extend .container;
+    @extend %section-padding;
+    @extend %section-margin;
+    & .section-h2 {
+        text-align: center;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        @extend .mx-auto;
+        max-width: 640px;
+    }
+    &__item {
+        $size: 64px;
+        padding-left: $size + 20px;
+        min-height: $size;
+        @include padding-y(1.4rem);
+        @include back-image($position: left top 1.2rem, $size: $size);
+    }
+    @extend %section-text;
+    @include media-breakpoint-down(lg) {
+        &__list {
+            max-width: 500px;
+        }
+        &__item {
+            $size-sm: 45px;
+            padding-left: $size-sm + 15px;
+            min-height: $size-sm;
+            @include back-image($position: left top 1.4rem, $size: $size-sm);
+        }
+    }
+}

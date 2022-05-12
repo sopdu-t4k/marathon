@@ -1,0 +1,62 @@
+.list-counter,
+.list-circle {
+    @extend .list-unstyled;
+    & li {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+.list-counter {
+    counter-reset: item;
+    & li {
+        &:before {
+            content: counter(item);
+            counter-increment: item;
+            color: $primary;
+            font-weight: $font-weight-bolder;
+            font-size: 1.1em;
+        }
+    }
+}
+.list-circle {
+    & li {
+        &:before {
+            content: '';
+            @include circle(.5em);
+            background-color: $primary;
+            top: .375em;
+            left: 2px;
+        }
+    }
+}
+.list-arrow {
+    $size: 22px;
+    @extend .list-unstyled;
+    & li {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        min-height: $size;
+        padding-left: $size + 12px;
+        margin-bottom: 1rem;
+        &:before {
+            content: '';
+            display: block;
+            width: $size;
+            height: $size;
+            background-image: url(../img/icons/arrow-right.svg);
+            @include back-image($size: contain);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
